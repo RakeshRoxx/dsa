@@ -1,0 +1,28 @@
+Types of Graph
+1. Undirected Graph
+2. Directed Graph
+3. Weighted Graph
+4. Cyclic Graph
+5. Acyclic Graph
+
+Degree:
+	The number of edges of the graph is called degree.
+	In directed graph degree is two types
+	1. In Degree (Number of incoming edges)
+	2. Out Degree (Number of outgoing edges)
+
+Path:
+	its the way to going from one vertex to another without repeating any vertex.
+
+Graph Represantation:
+	1. Adjacency Matrix
+	2. Adjacency List
+
+	Matrix:
+		to represent an eged between two vertex(u, v) we store value of the matrix[u][v] = 1, and all the other position of the matrix have a value of 0.
+		SC : O(N^2) N = Number of vertex.
+	List:
+		we take a array of list/vector in that we store value of all the vertex can be reached from a particular vertex.
+		SC : O(N + 2*E) N = Vertex, E = NUmber of Edges.
+
+	Resources: https://www.javatpoint.com/graph-theory-graph-representations
