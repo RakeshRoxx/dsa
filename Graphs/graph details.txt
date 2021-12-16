@@ -26,3 +26,12 @@ Graph Represantation:
 		SC : O(N + 2*E) N = Vertex, E = NUmber of Edges.
 
 	Resources: https://www.javatpoint.com/graph-theory-graph-representations
+
+Traversal Technique:
+	BFS(Breadth First Search)
+	DFS(Depth First Search)
+
+
+
+Questions:
+	https://leetcode.com/problems/number-of-islands/ (BFS)

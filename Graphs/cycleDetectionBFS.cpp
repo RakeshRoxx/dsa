@@ -1,25 +1,25 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// TC O(N + E)
-// SC O(N+E) + O(N) + O(N);
-
-
-void bfs(int source, vector<bool> &visited, vector<int> list[], vector<int> &ans) {
-	queue<int> q;
-	q.push(source);
+bool cycleCheckBfs(int source, vector<bool> &visited, vector<int> list[]) {
+	queue<pair<int, int>> q;
+	q.push({source, -1});
 	visited[source] = true;
-	while (!q.empty()) {
+	while (not q.empty()) {
 		auto node = q.front();
 		q.pop();
-		ans.push_back(node);
-		for (auto &it : list[node]) {
-			if (!visited[it]) {
-				q.push(it);
+		for (auto &it : list[node.first]) {
+			if (not visited[it]) {
 				visited[it] = true;
+				q.push({it, node.first});
+			} else {
+				if (node.second != it) {
+					return true;
+				}
 			}
 		}
 	}
+	return false;
 }
 
 
@@ -36,13 +36,14 @@ void solution() {
 		list[u].push_back(v);
 		list[v].push_back(u);
 	}
+	int cycle = 0;
 	for (int i = 1; i <= N; i++) {
 		if (!visited[i]) {
-			bfs(i, visited, list, ans);
+			if (cycleCheckBfs(i, visited, list))
+				cycle++;
 		}
 	}
-	for (auto &it : ans)
-		cout << it << " ";
+	cout << cycle;
 }
 
 int main() {
