@@ -1,6 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// TC - O(N + E)
+// SC - O(N+E) Graph  + O(N) Color + O(N) Queue
+
 bool bipartide(int src, vector<int> &color, vector<int> list[]) {
 	queue<int> q;
 	q.push(src);
