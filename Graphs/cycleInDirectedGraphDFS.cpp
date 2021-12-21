@@ -30,7 +30,6 @@ void solution() {
 		int u, v;
 		cin >> u >> v;
 		list[u].push_back(v);
-		// list[v].push_back(u);
 	}
 	for (int i = 1; i <= N; i++) {
 		if (vis[i] == 0) {
