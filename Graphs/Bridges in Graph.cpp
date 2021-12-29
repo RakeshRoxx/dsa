@@ -1,6 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+/*
+	TC - O(N + E) dfs
+	Sc - O(N + E) + O(3N) adj + intime + lowtime + vis
+
+	Ques.
+		https://codeforces.com/problemset/problem/118/E
+*/
+
 vector<int> inTime, lowTime;
 vector<bool> vis;
 int timer = 1;
