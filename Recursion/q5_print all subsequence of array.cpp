@@ -1,6 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// TC = O(2^n)  exponention tc
+// for every index there are two choices( recursive fun call )
+// for n==2 _ _ _ = 2 2 2 = 2 ^ 3 (fun calls)
+
+
 int sizeArr;
 
 void printSubsequence(int idx, vector<int> &ans, vector<int> &arr) {
