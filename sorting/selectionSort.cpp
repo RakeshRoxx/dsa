@@ -1,31 +1,18 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void insertionSortRec(int arr[], int len) {
-	if (len <= 1)
-		return;
 
-	insertionSortRec(arr, len - 1);
+void selectionSort(int arr[], int n) {
+	// devide the array in two part sorted and unsorted
+	// take the min value from the unsorted part and put it in sorted part
 
-	int key = arr[len - 1];
-	int pos = len - 2;
-	while (pos >= 0 and arr[pos] > key) {
-		arr[pos + 1] = arr[pos];
-		pos--;
-	}
-	arr[pos + 1] = key;
-}
-
-void insertionSort(int arr[], int n) {
-	int key;
-	for (int i = 1; i < n; i++) {
-		key = arr[i];
-		int j = i - 1;
-		while (j >= 0 and arr[j] > key) {
-			arr[j + 1] = arr[j];
-			j--;
-		}
-		arr[j + 1] = key;
+	int minValueIdx;
+	for (int i = 0; i < n - 1; i++) {
+		minValueIdx = i;
+		for (int j = i + 1; j < n; j++)
+			if (arr[j] < arr[minValueIdx])
+				minValueIdx = j;
+		swap(arr[i], arr[minValueIdx]);
 	}
 }
 

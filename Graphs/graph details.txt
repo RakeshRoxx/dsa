@@ -23,7 +23,7 @@ Graph Represantation:
 		SC : O(N^2) N = Number of vertex.
 	List:
 		we take a array of list/vector in that we store value of all the vertex can be reached from a particular vertex.
-		SC : O(N + 2*E) N = Vertex, E = NUmber of Edges.
+		SC : O(N + 2*E) N = Vertex, E = Number of Edges.
 
 	Resources: https://www.javatpoint.com/graph-theory-graph-representations
 
@@ -31,6 +31,47 @@ Traversal Technique:
 	BFS(Breadth First Search)
 	DFS(Depth First Search)
 
+
+Topices:
+	1) BFS
+
+	2) DFS
+
+	3) cycle detection
+		i) Using DFS
+		ii) Using BFS
+		iii) Directed Graph BFS Khan's Algo
+		iv) Directed Graph DFS
+
+	4) Shortest Path from single source to all the nodes
+		i) UnDir Graph BFS
+		ii) UnDir Weighted Graph (Dijkstra's Algo)
+		iii) In a DAG
+
+	5) Shortest path between all paires of nodes
+		i) Floyed Warshall Algo
+
+	6) Topological Sort
+		i) DFS
+		ii) Khan's Algo
+
+	7) Find negative weighted cycle
+		i) Bellman Ford Algo
+
+	8) Disjoint Set Union Data Structure
+
+	9) Bipartite Graph
+
+	10) MST
+		i) Kruskal Algo
+		ii) Prim's Algo
+
+	11) Flood Fill Algo
+
+	12) Strongly Connected Component
+		i) Kosaraju's Algo
+		ii) Tarjans's Algo
+	13) Articulation Point
 
 
 Questions:
